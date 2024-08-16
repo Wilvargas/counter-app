@@ -1,10 +1,11 @@
 import React from 'react'
-import { useFetch } from '../hooks'
+import { useCounter, useFetch } from '../hooks'
 
 
 export const MultipleCustomHooks = () => {
 
-  const { data, hasError, isLoading } = useFetch('https://pokeapi.co/api/v2/pokemon/3');
+  const { counter, decrement, increment }= useCounter(1);
+  const { data, hasError, isLoading } = useFetch(`https://pokeapi.co/api/v2/pokemon/${ counter }`);
   
   
 
@@ -17,6 +18,21 @@ return (
         { isLoading && <p>Cargando...</p> }
 
         <h2>{ data?.name }</h2>
+
+        <button
+          className='btn btn-primary mt-2'
+          onClick={ () => counter > 1 ? decrement() : null }
+        >
+          Anterior
+        </button>
+
+
+        <button
+          className='btn btn-primary mt-2'
+          onClick={ () => increment() }
+        >
+          Siguiente
+        </button>
     </>
   )
 }
