@@ -11,8 +11,8 @@ export const PokemonCard = ({ id, name, sprites = [] }) => {
       {/* imagenes */}
       <div>
         {
-          sprites.map( sprite => (
-            <img key={ sprite } src={ sprite } alt={ name } />
+           sprites.map((sprite, index) => (
+            <img key={`${sprite}-${index}`} src={sprite} alt={name} />
           ))
         }
   
