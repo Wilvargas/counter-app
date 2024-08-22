@@ -9,24 +9,15 @@ export const MultipleCustomHooks = () => {
   const { counter, decrement, increment }= useCounter(1);
   const { data, hasError, isLoading } = useFetch(`https://pokeapi.co/api/v2/pokemon/${ counter }`);
   
-  //  // Verificar que los datos existan antes de usarlos
-  //  const { name, sprites } = data || {}; // Desestructuramos sólo si 'data' no es null
-
-
 return (
-    <>
-    
+    <>  
         <h1>Información de Pokemón</h1>
         <hr />
 
-
         { 
-
-        
           isLoading
           ? <LoadingMessage /> 
           : (
-            
             <PokemonCard 
             id={ counter } 
             name={ data.name }
