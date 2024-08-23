@@ -10,6 +10,8 @@ export const FocusScreen = () => {
     const onClick = () => {
         // document.querySelector('input').focus();
         inputRef.current.select(); 
+        console.log(inputRef);
+        
     }
 
 
@@ -28,7 +30,6 @@ export const FocusScreen = () => {
         <button 
             className="btn btn-primary mt-2"
             onClick={ onClick }
-        
         >
             
             Set focus

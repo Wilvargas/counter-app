@@ -20,7 +20,7 @@ export const useFetch = ( url ) => {
   const setLoadingState = () => {
     setState({
         data: null,
-        isLoading: true,f
+        isLoading: true,
         hasError: false,
         error: null,
     });
