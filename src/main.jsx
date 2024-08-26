@@ -15,12 +15,14 @@ import { createRoot } from 'react-dom/client';
 // import { Memorize } from './06-memos/Memorize';
 // import { MemoHook } from './06-memos/MemoHook';
 // import { CallbackHook } from './06-memos/CallbackHook';
-
-import './index.css';
 import { Padre } from './07-tarea-memo/Padre';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Padre />
-  </StrictMode>,
-)
+import './08-useReducer/intro-reducer';
+
+import './index.css';
+
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <Padre />
+//   </StrictMode>,
+// )
