@@ -21,7 +21,7 @@ export const LoginPage = () => {
             className="btn btn-primary"
             onClick={ () => setUser({ id: 123, name: 'Juan', email: 'juan@google.com' }) }
           >
-            Establecer Usuario
+            Set User
           </button>
   
       </>
