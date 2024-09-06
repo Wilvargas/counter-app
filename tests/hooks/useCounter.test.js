@@ -20,7 +20,7 @@ describe('Pruebas en el useCounter', () => {
         const { result } = renderHook( () => useCounter(100) );
         const { counter } = result.current;
         expect( counter ).toBe( 100 );
-    })
+    });
 
     test('debe incrementar el contador', () => {
 
@@ -33,7 +33,7 @@ describe('Pruebas en el useCounter', () => {
             
 
         expect( result.current.counter ).toBe(103)
-    })
+    });
     
     test('debe decrementar el contador', () => {
 
@@ -47,7 +47,7 @@ describe('Pruebas en el useCounter', () => {
             
 
         expect( result.current.counter ).toBe(97)
-    })
+    });
     
     test('debe resetear el contador', () => {
 
@@ -55,14 +55,14 @@ describe('Pruebas en el useCounter', () => {
         const { counter, decrement, reset } = result.current;
 
         act( () => {
+
             decrement();
             decrement(2);
-
             reset();
         });
             
 
         expect( result.current.counter ).toBe(100)
-    })
+    });
 
-})
+});
